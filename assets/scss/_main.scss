@@ -1,0 +1,279 @@
+/* 메인 */
+#main {
+  width: 100%;
+}
+.sec01 {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  
+    &.Tit {
+      margin-bottom: 35px;
+    }
+     
+    .b {
+      &::before, &::after {
+        content: '';
+        display: block;
+        margin: 0 5px;
+        width: 22px;
+        height: 22px;
+        background: url(../image/mainpro-icon.png) $bg-img;
+        background-size: 22px;
+      }
+    }
+  
+    &.cnt {
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+  
+      li {
+        width: 50%;
+  
+        a {
+          height: 157px;
+          border: 2.5px solid $Mgray-400;
+          border-radius: 30px;
+          margin: 5px ;
+          padding-top: 5px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          background: $white;
+        }
+      }
+    }
+  
+    &.cnt01::before {
+      content: '';
+      display: block;
+      margin: 0 5px;
+      width: 100px;
+      height: 100px;
+      background: url(../image/petfood-icon.png) $bg-img;
+      opacity: 60%;
+      background-size: contain;
+      display: flex;
+    }
+    
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  
+    &.cnt02::before {
+      content: '';
+      display: block;
+      margin: 0 5px;
+      width: 100px;
+      height: 100px;
+      background: url(../image/pettrip-icon.png) $bg-img;
+      opacity: 60%;
+      background-size: contain;
+      display: flex;
+    }
+  
+    &.cnt03::before {
+      content: '';
+      display: block;
+      margin: 0 5px;
+      width: 100px;
+      height: 100px;
+      background: url(../image/petcare-icon.png) $bg-img;
+      opacity: 60%;
+      background-size: contain;
+      display: flex;
+    }
+  
+    &.cnt04::before {
+      content: '';
+      display: block;
+      margin: 0 5px;
+      width: 80%;
+      height: 100px;
+      background: url(../image/petmeeting-icon.png) $bg-img;
+      opacity: 60%;
+      background-size: contain;
+      display: flex;
+    }
+  
+    &.btn {
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .btn.map {
+    height: 50px;
+    padding-left: 10px;
+
+    display: block;
+    background: $Mgray-900;
+    border-radius: 50px;
+    font-family: 'Noto sans KR';
+    font-weight: 600;
+    font-size: 20px;
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 30px;
+      background: url(../image/arrowdirection-icon.svg) $bg-img;
+      background-size: contain;
+      margin-left: 10px;
+    }
+  }
+  
+  #sec-bg {
+    display: block;
+    padding-top: 50px;
+    margin: 0 10px;
+    width: 100%;
+    height: 1155px;
+    background: #222 url(../image/sec-bg.jpg) $bg-img;
+    background-size: contain;
+    transform: translateX(-10px);
+  }
+  
+  #sec02, #sec03, #sec04 {
+    margin: 0 10px;
+  }
+  
+  .sec02.Tit, .sec03.Tit, .sec04.Tit {
+    height: 45px;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .sec02 .b, .sec03 .b, .sec04 .b {
+    width: 100%;
+    color: $white;
+    line-height: 45px;
+  }
+  
+  .sec02 .b {
+    &::before {
+      content: '';
+      display: block;
+      padding-right: 10px;
+      width: 40px;
+      height: 40px;
+      background: url(../image/notice-icon.png) $bg-img;
+      background-size: contain;
+    }
+  
+    &::after {
+      content: '';
+      display: block;
+      margin-left: auto;
+      width: 40px;
+      height: 22px;
+      background: url(../image/arrowdirection-icon.svg) $bg-img;
+      background-size: cover;
+      display: flex;
+    }
+  }
+  
+  .bbs.list li, .qna.list li, .evnt.list li {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bbs.list li a, .qna.list li a, .evnt.list li a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    height: 60px;
+    border-bottom: 1px solid $white;
+  }
+  
+  .bbs.list li a span, .qna.list li a span, .evnt.list li a span {
+    width: 75px;
+    height: 30px;
+    border: 1.5px solid $white;
+    color: $white;
+    border-radius: 50px;
+    line-height: 30px;
+    margin: 15px 25px 15px 10px;
+  }
+  
+  .bbs.list li a p, .qna.list li a p, .evnt.list li a p {
+    color: $white;
+  }
+  
+  .sec03 .b {
+    &::before {
+      content: '';
+      display: block;
+      padding-right: 10px;
+      width: 40px;
+      height: 40px;
+      background: url(../image/event-icon.png) $bg-img;
+      background-size: contain;
+    }
+  
+    &::after {
+      content: '';
+      display: block;
+      margin-left: auto;
+      width: 40px;
+      height: 22px;
+      background: url(../image/arrowdirection-icon.svg) $bg-img;
+      background-size: cover;
+      display: flex;
+    }
+  }
+  
+  .sec04 {
+    .b {
+      &::before {
+        content: '';
+        display: block;
+        padding-right: 10px;
+        width: 40px;
+        height: 40px;
+        background: url(../image/qmark-icon.png) $bg-img;
+        background-size: contain;
+      }
+  
+      &::after {
+        content: '';
+        display: block;
+        margin-left: auto;
+        width: 40px;
+        height: 22px;
+        background: url(../image/arrowdirection-icon.svg) $bg-img;
+        background-size: cover;
+        display: flex;
+      }
+    }
+  
+    &.inner {
+      margin-bottom: 50px;
+    }
+  }
+
+.b{
+    font-family: 'Noto sans KR';
+    font-weight: 600;
+    font-size: 28px;
+    @include flexAllCenter;
+}

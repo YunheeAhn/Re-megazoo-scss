@@ -1,0 +1,814 @@
+@charset "UTF-8";
+/* NOTO SANS KR */
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  font-display: swap;
+  src: local("NotoSansKR-Black"), url("fonts/notosansKR/NotoSansKR-Black.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-display: swap;
+  src: local("NotoSansKR-Bold"), url("fonts/notosansKR/NotoSansKR-Bold.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-display: swap;
+  src: local("NotoSansKR-Medium"), url("fonts/notosansKR/NotoSansKR-Medium.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-display: swap;
+  src: local("NotoSansKR-Regular"), url("fonts/notosansKR/NotoSansKR-Regular.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-display: swap;
+  src: local("NotoSansKR-Light"), url("fonts/notosansKR/NotoSansKR-Light.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 100;
+  font-display: swap;
+  src: local("NotoSansKR-Thin"), url("fonts/notosansKR/NotoSansKR-Thin.woff2") format("woff2"), url("fonts/notosansKR/NotoSansKR-Thin.woff") format("woff");
+}
+/* PRETENDARD */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-display: swap;
+  src: local("Pretendard Black"), url("fonts/Pretendard/Pretendard-Black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-display: swap;
+  src: local("Pretendard ExtraBold"), url("fonts/Pretendard/Pretendard-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("fonts/Pretendard/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("fonts/Pretendard/Pretendard-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("fonts/Pretendard/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("fonts/Pretendard/Pretendard-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"), url("fonts/Pretendard/Pretendard-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-display: swap;
+  src: local("Pretendard ExtraLight"), url("fonts/Pretendard/Pretendard-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-display: swap;
+  src: local("Pretendard Thin"), url("fonts/Pretendard/Pretendard-Thin.woff2") format("woff2");
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "$font-family", "Pretendard Variable", "맑은 고딕", sans-serif;
+  color: #222222;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #222;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+body {
+  width: 360px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+#header {
+  width: 360px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+#header #logo {
+  display: block;
+}
+#header #logo::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 30px;
+  background: url(../image/megazoo-logo.png) no-repeat center center;
+  background-size: 75px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#header .header-icon {
+  margin-right: auto;
+}
+#header .mypg {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+#header .mypg::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../image/mypage-icon.png) no-repeat center center;
+  background-size: 22px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#header button {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 네비게이션메뉴 */
+#gnb {
+  position: relative;
+}
+#gnb .btn.menubar::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../image/menubar-icon.png) no-repeat center center;
+  background-size: 22px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.hover {
+  display: none;
+}
+
+.allmenu-header {
+  width: 360px;
+  height: 70px;
+  display: flex;
+}
+
+.allmenu {
+  z-index: 1000;
+  display: none;
+  width: 360px;
+  height: auto;
+  position: absolute;
+  top: -22px;
+  right: 0;
+}
+
+#gnb:hover .allmenu {
+  display: block;
+}
+
+.menubar-click.tit {
+  z-index: 1000000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  display: block;
+  font-size: 38px;
+  font-weight: bold;
+  color: #222222;
+  padding: 20px 20px 20px 0;
+}
+.menubar-click.tit:hover {
+  color: #e30613;
+  display: flex;
+}
+.menubar-click.tit:hover::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../image/gnb-choice.png) no-repeat center center;
+  background-size: 22px;
+}
+
+.lang {
+  display: flex;
+  justify-content: center;
+}
+.lang ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.lang ul a {
+  padding: 5px;
+}
+.lang ul::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../image/lang-icon.png) no-repeat center center;
+  background-size: 22px;
+}
+
+/* 스와이퍼 */
+swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* 슬라이드텍스트 */
+.animated .right {
+  background: #222222;
+}
+.animated .left {
+  background: #e30613;
+}
+.animated span {
+  font-family: "Noto sans KR";
+  font-size: 20px;
+  color: #fff;
+}
+
+.flowtxt {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+}
+
+.animated > .flowtxt.right > div {
+  line-height: 50px;
+  animation: marqueer 50s linear infinite;
+}
+.animated > .flowtxt.left > a > div {
+  line-height: 50px;
+  animation: marqueel 48s linear infinite;
+}
+
+@keyframes marqueer {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marqueel {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* 메인 */
+.sec01 {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+.sec01.Tit {
+  margin-bottom: 35px;
+}
+.sec01 .b::before, .sec01 .b::after {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 22px;
+  height: 22px;
+  background: url(../image/mainpro-icon.png) no-repeat center center;
+  background-size: 22px;
+}
+.sec01.cnt > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.sec01.cnt li {
+  width: 50%;
+}
+.sec01.cnt li a {
+  width: 160px;
+  height: 157px;
+  border: 2.5px solid rgba(217, 217, 217, 0.3764705882);
+  border-radius: 30px;
+  margin: 5px 10px;
+  padding-top: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+.sec01.cnt01::before {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 100px;
+  height: 100px;
+  background: url(../image/petfood-icon.png) no-repeat center center;
+  opacity: 60%;
+  background-size: contain;
+  display: flex;
+}
+.sec01 p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.sec01.cnt02::before {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 100px;
+  height: 100px;
+  background: url(../image/pettrip-icon.png) no-repeat center center;
+  opacity: 60%;
+  background-size: contain;
+  display: flex;
+}
+.sec01.cnt03::before {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 100px;
+  height: 100px;
+  background: url(../image/petcare-icon.png) no-repeat center center;
+  opacity: 60%;
+  background-size: contain;
+  display: flex;
+}
+.sec01.cnt04::before {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 100px;
+  height: 100px;
+  background: url(../image/petmeeting-icon.png) no-repeat center center;
+  opacity: 60%;
+  background-size: contain;
+  display: flex;
+}
+.sec01.btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn.map {
+  width: 288px;
+  height: 50px;
+  padding: 10px;
+  display: block;
+  background: #222222;
+  border-radius: 50px;
+  font-family: "Noto sans KR";
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn.map::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 30px;
+  background: url(../image/arrowdirection-icon.svg) no-repeat center center;
+  background-size: contain;
+  margin-left: 10px;
+}
+
+#sec-bg {
+  display: block;
+  padding-top: 50px;
+  margin: 0 10px;
+  width: 360px;
+  height: 1155px;
+  background: #222 url(../image/sec-bg.jpg) no-repeat center center;
+  background-size: contain;
+  transform: translateX(-10px);
+}
+
+#sec02, #sec03, #sec04 {
+  margin: 0 10px;
+}
+
+.sec02.Tit, .sec03.Tit, .sec04.Tit {
+  height: 45px;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.sec02 .b, .sec03 .b, .sec04 .b {
+  width: 100%;
+  color: #fff;
+  line-height: 45px;
+}
+
+.sec02 .b::before {
+  content: "";
+  display: block;
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(../image/notice-icon.png) no-repeat center center;
+  background-size: contain;
+}
+.sec02 .b::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  height: 22px;
+  background: url(../image/arrowdirection-icon.svg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+}
+
+.bbs.list li, .qna.list li, .evnt.list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.bbs.list li a, .qna.list li a, .evnt.list li a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  height: 60px;
+  border-bottom: 1px solid #fff;
+}
+
+.bbs.list li a span, .qna.list li a span, .evnt.list li a span {
+  width: 75px;
+  height: 30px;
+  border: 1.5px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  line-height: 30px;
+  margin: 15px 25px 15px 10px;
+}
+
+.bbs.list li a p, .qna.list li a p, .evnt.list li a p {
+  color: #fff;
+}
+
+.sec03 .b::before {
+  content: "";
+  display: block;
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(../image/event-icon.png) no-repeat center center;
+  background-size: contain;
+}
+.sec03 .b::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  height: 22px;
+  background: url(../image/arrowdirection-icon.svg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+}
+
+.sec04 .b::before {
+  content: "";
+  display: block;
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  background: url(../image/qmark-icon.png) no-repeat center center;
+  background-size: contain;
+}
+.sec04 .b::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  width: 40px;
+  height: 22px;
+  background: url(../image/arrowdirection-icon.svg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+}
+.sec04.inner {
+  margin-bottom: 50px;
+}
+
+.b {
+  font-family: "Noto sans KR";
+  font-weight: 600;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=comm.css.map */

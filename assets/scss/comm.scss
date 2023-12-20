@@ -1,0 +1,236 @@
+@import 'variables','mixins', 'fonts', 'resets' ;
+
+
+/* 헤더 */
+  
+#header {
+    width: 100%;
+    height: $hd-height;
+
+    @include flexSpaceBetween;
+
+    position: relative;
+    
+    #logo {
+        display: block;
+        &::after {
+            content: '';
+            display: block;
+            width: 75px;
+            height: 30px;
+            background: url(../image/megazoo-logo.png) $bg-img;
+            background-size: 75px 30px;
+
+            @include posXY
+        }
+      }
+    .header-icon {
+        margin-right: auto;
+      }
+    .mypg {
+        display: block;
+        width: 40px;
+        height: 40px;
+      
+        &::after {
+            content: '';
+            display: block;
+            width: 22px;
+            height: 22px;
+            background: url(../image/mypage-icon.png) $bg-img;
+            background-size: 22px;
+            position: absolute;
+            top: 50%;
+
+            @include posY ;
+        }
+    }
+      
+    button {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+  
+  /* 네비게이션메뉴 */
+  
+  #gnb {
+    position: relative;
+
+    .btn.menubar::after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url(../image/menubar-icon.png) $bg-img;
+        background-size: 22px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+}
+  
+.hover {
+    display: none;
+}
+  
+.allmenu-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+  
+.allmenu {
+    z-index: 1000;
+    display: none;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: -22px;
+    left: 0;
+}
+  
+#gnb:hover .allmenu {
+    width: 100%;
+    display: block;
+}
+
+.menubar-click.tit {
+    width: 100%;
+    background: $white;
+    display: flex;
+    align-items: center;
+    display: block;
+    font-size: 2.375rem;
+    font-weight: bold;
+    padding: 20px 20px 20px 0;
+  
+    &:hover {
+        color: $secondary;
+        display: flex;
+        width: 100%;
+        display: block;
+  
+      &::after {
+        content: '';
+        display: block;
+        display: flex;
+        width: 22px;
+        height: 22px;
+        background: url(../image/gnb-choice.png) $bg-img;
+        background-size: 22px;
+        }
+    }
+}
+  
+.lang {
+    display: flex;
+    justify-content: center;
+  
+    ul {
+      display: flex;
+      text-align: center;
+      align-items: center;
+  
+    a {
+        padding: 5px;
+    }
+  
+      &::before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: url(../image/lang-icon.png) $bg-img;
+        background-size: 22px;
+        }
+    }
+}
+  
+/* 스와이퍼 */
+swiper-container {
+    width: 100%;
+    height: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 1.125rem;
+    background: $white;
+
+    @include flexAllCenter;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+swiper-slide {
+    
+}
+
+  
+/* 슬라이드텍스트 */
+  
+.animated {
+    .right {
+        background: $primary;
+    }
+  
+    .left {
+        background: $secondary;
+    }
+  
+    span {
+        font-family: 'Noto sans KR';
+        font-size: 1.25rem;
+        color: $white;
+    }
+}
+  
+.flowtxt {
+    display: inline-block;
+    white-space: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50px;
+}
+  
+.animated > .flowtxt {
+    &.right > div {
+        line-height: 50px;
+        animation: marquee-ani 30s linear normal infinite;
+    }
+  
+    &.left > a > div {
+        line-height: 50px;
+        animation: marquee-ani 30s linear reverse infinite;
+    }
+}
+  
+  @keyframes marquee-ani {
+    from {
+        transform: translateX(0);
+    }
+  
+    to {
+        transform: translateX(-100%);
+    }
+}
+  
+
+  
+  
+
+@import 'main';
