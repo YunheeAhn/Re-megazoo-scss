@@ -55,29 +55,41 @@
 
 <!-- 모바일 메인페이지 -->
 <body>
+    <div id="u-skip">
+        <!-- 웹접근성, 꼭 있어야 함 -->
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#main">본문 바로가기</a>
+    </div>
+
+    
     <header id="header">
-        <h1>
-            <a href="#" id="logo">
-                <span class="blind">megazoo,메가주</span>
-                <!-- after 로고 -->
-            </a>
-        </h1>
-        
-        <div class="header-icon">
-            <a href="#" class="mypg">
-                <span class="blind">mypage</span>
-                <!-- after 마이페이지아이콘 -->
-            </a>
-        </div>
-        
-        <!-- gnb -->
-        <div>
-            <nav id="gnb">
-                <button class="btn menubar">
-                    <span class="blind">전체메뉴보기</span>    
+        <div class="wrap"> 
+            <h1 id="logo">
+                <a href="#" >
+                    <span class="blind">megazoo,메가주</span>
+                    <!-- after 로고 -->
+                </a>
+            </h1>
+            
+            <div class="header-icon">
+                <a href="#" class="mypg">
+                    <span class="blind">mypage</span>
+                    <!-- after 마이페이지아이콘 -->
+                </a>
+            </div>
+            
+            <!-- gnb -->
+            
+            <div class="gnb-wrap" >
+                <input type="checkbox" name="gnbNav" 
+                id="gnbNav" class="btn Imenubar">
+                <label for="gnbNav" class="btn Lmenubar">
+                    <div class="blind">전체메뉴보기</div>
+                    <p class="bar"></p>
                     <!-- after 메뉴바아이콘 -->
-                </button>
-                <div class="allmenu">
+                </label>
+                
+                <nav id="gnb" class="allmenu">
                     <div class="allmenu-header">
                         
                         <!-- //이전으로 돌아가는 화살표, 로고, 로그인버튼 있어야함// -->
@@ -126,8 +138,9 @@
                             <li><a href="#">English</a></li>
                         </ul>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
+            
         </div>
     </header>
 
@@ -153,10 +166,6 @@
                     <span>17-19 NOVEMBER KINTEX ILSAN</span>
                     <span>17-19 NOVEMBER KINTEX ILSAN</span>
                     <span>17-19 NOVEMBER KINTEX ILSAN</span>
-                    <span>17-19 NOVEMBER KINTEX ILSAN</span>
-                    <span>17-19 NOVEMBER KINTEX ILSAN</span>
-                    <span>17-19 NOVEMBER KINTEX ILSAN</span>
-                    <span>17-19 NOVEMBER KINTEX ILSAN</span>
                 </div>
             </div>
         </div>
@@ -165,22 +174,6 @@
             <div class="flowtxt left">
                 <a href="#">
                     <div>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
-                        <span>사전예약 하러가기</span>
                         <span>사전예약 하러가기</span>
                         <span>사전예약 하러가기</span>
                         <span>사전예약 하러가기</span>

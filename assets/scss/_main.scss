@@ -23,11 +23,12 @@
     }
   
     &.cnt {
-      > ul {
+      ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-between;
+
       }
   
       li {
@@ -45,10 +46,63 @@
           flex-direction: column;
           align-items: center;
           background: $white;
+
+          &:hover {
+            background: $Mgray-900;
+            color: $white;
+            font-weight: 500;
+            border: 2.5px solid $Mgray-900;
+
+            &.cnt01::before {
+              content: '';
+              display: block;
+              margin: 0 5px;
+              width: 100px;
+              height: 100px;
+              background: url(../image/petmeeting--hover-icon.png) $bg-img;
+              opacity: 1;
+              background-size: contain;
+              display: flex;
+            }
+
+            &.cnt02::before {
+              content: '';
+              display: block;
+              margin: 0 5px;
+              width: 100px;
+              height: 100px;
+              background: url(../image/pettrip--hover-icon.png) $bg-img;
+              opacity: 1;
+              background-size: contain;
+              display: flex;
+            }
+            &.cnt03::before {
+              content: '';
+              display: block;
+              margin: 0 5px;
+              width: 100px;
+              height: 100px;
+              background: url(../image/petcare--hover-icon.png) $bg-img;
+              opacity: 1;
+              background-size: contain;
+              display: flex;
+            }
+          
+            &.cnt04::before {
+              content: '';
+              display: block;
+              margin: 0 5px;
+              width: 80%;
+              height: 100px;
+              background: url(../image/petmeeting--hover-icon.png) $bg-img;
+              opacity: 1;
+              background-size: contain;
+              display: flex;
+            }
+          }
         }
       }
     }
-  
     &.cnt01::before {
       content: '';
       display: block;
@@ -64,6 +118,7 @@
     p {
       margin-top: 8px;
       font-size: 14px;
+      font-weight: 400;
     }
   
     &.cnt02::before {
@@ -116,6 +171,7 @@
 
     display: block;
     background: $Mgray-900;
+    border: 2px solid $primary;
     border-radius: 50px;
     font-family: 'Noto sans KR';
     font-weight: 600;
@@ -135,6 +191,24 @@
       background: url(../image/arrowdirection-icon.svg) $bg-img;
       background-size: contain;
       margin-left: 10px;
+    }
+
+    &:hover {
+      color: $primary;
+      background: $white;
+      border: 2px solid $primary;
+
+      transform: translateY(-10px);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 30px;
+        background: url(../image/arrowdirection--hover-icon.svg) $bg-img;
+        background-size: contain;
+        margin-left: 10px;
+      }
     }
   }
   
@@ -277,3 +351,4 @@
     font-size: 28px;
     @include flexAllCenter;
 }
+

@@ -35,3 +35,9 @@ Megazoo website Renewel with responsive Web
 : 반응형 웹-> 전체 width:360px -> width:100%변경
 : allmenu 호버시 좁게 뜨는 오류 해결
     position:absolute; -> position:fixed; 변경
+
+2023-12-21
+: button -> input 박스로 변경 후 체크드 완료
+: 메인 섹션01 컨텐츠 호버 기능 설정 중
+
+: 오시는길 이미지 가로 100% 설정 해야 함
