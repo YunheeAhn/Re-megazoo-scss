@@ -59,7 +59,7 @@
               margin: 0 5px;
               width: 100px;
               height: 100px;
-              background: url(../image/petmeeting--hover-icon.png) $bg-img;
+              background: url(../image/petfood--hover-icon.png) $bg-img;
               opacity: 1;
               background-size: contain;
               display: flex;
@@ -103,6 +103,7 @@
         }
       }
     }
+
     &.cnt01::before {
       content: '';
       display: block;
@@ -174,7 +175,6 @@
     border: 2px solid $primary;
     border-radius: 50px;
     font-family: 'Noto sans KR';
-    font-weight: 600;
     font-size: 20px;
     color: $white;
     text-align: center;
@@ -215,31 +215,36 @@
   #sec-bg {
     display: block;
     padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0 10px;
     width: 100%;
-    height: 1155px;
+    height: auto;
     background: #222 url(../image/sec-bg.jpg) $bg-img;
     background-size: contain;
     transform: translateX(-10px);
   }
   
-  #sec02, #sec03, #sec04 {
+  #sec02, #sec03, #sec04, #sec05 {
     margin: 0 10px;
   }
   
-  .sec02.Tit, .sec03.Tit, .sec04.Tit {
+  .sec02, .sec03, .sec04 {
+    .Tit{
     height: 45px;
     background-color: #222222;
     display: flex;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 15px;
+    }
   }
   
-  .sec02 .b, .sec03 .b, .sec04 .b {
-    width: 100%;
-    color: $white;
-    line-height: 45px;
+  .sec02 , .sec03 , .sec04  {
+    .b{
+      width: 100%;
+      color: $white;
+      line-height: 45px;
+    }
   }
   
   .sec02 .b {
@@ -268,29 +273,42 @@
   .bbs.list li, .qna.list li, .evnt.list li {
     display: flex;
     flex-direction: column;
-  }
-  
-  .bbs.list li a, .qna.list li a, .evnt.list li a {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 600;
-    height: 60px;
-    border-bottom: 1px solid $white;
-  }
-  
-  .bbs.list li a span, .qna.list li a span, .evnt.list li a span {
-    width: 75px;
-    height: 30px;
-    border: 1.5px solid $white;
-    color: $white;
-    border-radius: 50px;
-    line-height: 30px;
-    margin: 15px 25px 15px 10px;
-  }
-  
-  .bbs.list li a p, .qna.list li a p, .evnt.list li a p {
-    color: $white;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-weight: 600;
+      height: 60px;
+      border-bottom: 1px solid $white;
+
+      p {
+        color: $white;
+      }
+      span {
+        width: 75px;
+        height: 30px;
+        border: 1.5px solid $white;
+        color: $white;
+        border-radius: 50px;
+        line-height: 30px;
+        margin: 15px 25px 15px 10px;
+      }
+    }
+
+    &:hover {
+      background: $white;
+
+      span {
+        color: $primary;
+        border: 2.0px solid $primary;
+      }
+
+      p {
+        color: $primary;
+        font-weight: 900;
+      }
+    }
   }
   
   .sec03 .b {
@@ -344,11 +362,65 @@
       margin-bottom: 50px;
     }
   }
+// sec04 이벤트 스와이퍼
 
-.b{
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.swiper-slide {
+  img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+#sec05 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  .inner {
+    .info {
+      
+    }
+    .Tit {
+      .b {
+        &::before, &::after {
+          content: '';
+          display: block;
+          margin: 0 5px;
+          width: 22px;
+          height: 22px;
+          background: url(../image/mainpro-icon.png) $bg-img;
+          background-size: 22px;
+        }
+      }
+    }
+    .mapimg {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.b {
     font-family: 'Noto sans KR';
-    font-weight: 600;
     font-size: 28px;
+    letter-spacing: -3.6px;
     @include flexAllCenter;
 }
 

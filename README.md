@@ -41,3 +41,7 @@ Megazoo website Renewel with responsive Web
 : 메인 섹션01 컨텐츠 호버 기능 설정 중
 
 : 오시는길 이미지 가로 100% 설정 해야 함
+
+
+2023-12-24
+: 섹션 2~4 호버 기능 완료

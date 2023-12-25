@@ -631,7 +631,7 @@ swiper-slide img {
   margin: 0 5px;
   width: 100px;
   height: 100px;
-  background: url(../image/petmeeting--hover-icon.png) no-repeat center center;
+  background: url(../image/petfood--hover-icon.png) no-repeat center center;
   opacity: 1;
   background-size: contain;
   display: flex;
@@ -733,7 +733,6 @@ swiper-slide img {
   border: 2px solid #222222;
   border-radius: 50px;
   font-family: "Noto sans KR";
-  font-weight: 600;
   font-size: 20px;
   color: #fff;
   text-align: center;
@@ -770,19 +769,20 @@ swiper-slide img {
 #sec-bg {
   display: block;
   padding-top: 50px;
+  padding-bottom: 50px;
   margin: 0 10px;
   width: 100%;
-  height: 1155px;
+  height: auto;
   background: #222 url(../image/sec-bg.jpg) no-repeat center center;
   background-size: contain;
   transform: translateX(-10px);
 }
 
-#sec02, #sec03, #sec04 {
+#sec02, #sec03, #sec04, #sec05 {
   margin: 0 10px;
 }
 
-.sec02.Tit, .sec03.Tit, .sec04.Tit {
+.sec02 .Tit, .sec03 .Tit, .sec04 .Tit {
   height: 45px;
   background-color: #222222;
   display: flex;
@@ -821,7 +821,6 @@ swiper-slide img {
   display: flex;
   flex-direction: column;
 }
-
 .bbs.list li a, .qna.list li a, .evnt.list li a {
   display: flex;
   align-items: center;
@@ -830,7 +829,9 @@ swiper-slide img {
   height: 60px;
   border-bottom: 1px solid #fff;
 }
-
+.bbs.list li a p, .qna.list li a p, .evnt.list li a p {
+  color: #fff;
+}
 .bbs.list li a span, .qna.list li a span, .evnt.list li a span {
   width: 75px;
   height: 30px;
@@ -840,9 +841,16 @@ swiper-slide img {
   line-height: 30px;
   margin: 15px 25px 15px 10px;
 }
-
-.bbs.list li a p, .qna.list li a p, .evnt.list li a p {
-  color: #fff;
+.bbs.list li:hover, .qna.list li:hover, .evnt.list li:hover {
+  background: #fff;
+}
+.bbs.list li:hover span, .qna.list li:hover span, .evnt.list li:hover span {
+  color: #222222;
+  border: 2px solid #222222;
+}
+.bbs.list li:hover p, .qna.list li:hover p, .evnt.list li:hover p {
+  color: #222222;
+  font-weight: 900;
 }
 
 .sec03 .b::before {
@@ -888,10 +896,49 @@ swiper-slide img {
   margin-bottom: 50px;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sec05 {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+#sec05 .inner .Tit .b::before, #sec05 .inner .Tit .b::after {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 22px;
+  height: 22px;
+  background: url(../image/mainpro-icon.png) no-repeat center center;
+  background-size: 22px;
+}
+#sec05 .inner .mapimg img {
+  width: 100%;
+}
+
 .b {
   font-family: "Noto sans KR";
-  font-weight: 600;
   font-size: 28px;
+  letter-spacing: -3.6px;
   display: flex;
   align-items: center;
   justify-content: center;
