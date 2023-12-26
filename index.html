@@ -50,7 +50,10 @@
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/comm.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     <script defer type="text/javascript" src="./assets/js/comm.js"></script>
+    
 </head>
 
 <!-- 모바일 메인페이지 -->
@@ -144,17 +147,49 @@
         </div>
     </header>
 
-    <swiper-container 
-        class="mySwiper" 
-        pagination="true" 
-        pagination-clickable="true" 
-        navigation="false" 
-        space-between="0"
-        loop="true">
-        <swiper-slide><img src="./assets/image/Mobile-bnr(1).jpg" alt="메인배너1"></swiper-slide>
-        <swiper-slide><img src="./assets/image/Mobile-bnr(2).jpg" alt="메인배너1"></swiper-slide>
-        <swiper-slide><img src="./assets/image/Mobile-bnr(3).jpg" alt="메인배너1"></swiper-slide>
-    </swiper-container>  
+    <div class="swiper mySwiper2" >
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="./assets/image/Mobile-bnr(1).jpg" alt="메인배너1">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="./assets/image/Mobile-bnr(2).jpg" alt="메인배너1">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <img src="./assets/image/Mobile-bnr(3).jpg" alt="메인배너1">
+                </a>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    <script>
+        const swiper = new Swiper('.mySwiper2', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
 
 
     <!-- 슬라이드텍스트1 -->
@@ -242,7 +277,6 @@
                     <a class="btn map" href="#">
                         부스배치도 바로가기
                         <!-- after 화살표 -->
-                        </a>
                     </a>
                 </div>
             </div>
@@ -351,25 +385,25 @@
                     </div>
                 </div>
 
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                <div class="swiper2 mySwiper2" >
+                    <div class="swiper2-wrapper2">
+                        <div class="swiper2-slide2">
                             <a href="#">
                                 <img src="./assets/image/Mobile-eventslide(1).jpg" alt="2024일정">
                             </a>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper2-slide2">
                             <a href="#">
                                 <img src="./assets/image/Mobile-eventslide(2).jpg" alt="무료수의상담">
                             </a>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper2-slide2">
                             <a href="#">
-                                <img src="./assets/image/Mobile-eventslide(1).jpg" alt="메가주쿠폰">
+                                <img src="./assets/image/Mobile-eventslide(3).jpg" alt="메가주쿠폰">
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination2"></div>
                   </div>
             </section>
         </div>
@@ -425,7 +459,6 @@
                 </div>
             </div>
         </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </main>
 
     <!-- 풋터 -->

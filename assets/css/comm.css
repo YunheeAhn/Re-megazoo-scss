@@ -510,14 +510,14 @@ legend {
 }
 
 /* 스와이퍼 */
-swiper-container {
+.swiper {
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
-swiper-slide {
+.swiper-slide {
   text-align: center;
   font-size: 1.125rem;
   background: #fff;
@@ -525,7 +525,7 @@ swiper-slide {
   align-items: center;
   justify-content: center;
 }
-swiper-slide img {
+.swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -682,7 +682,7 @@ swiper-slide img {
 }
 .sec01 p {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 .sec01.cnt02::before {
@@ -774,7 +774,6 @@ swiper-slide img {
   width: 100%;
   height: auto;
   background: #222 url(../image/sec-bg.jpg) no-repeat center center;
-  background-size: contain;
   transform: translateX(-10px);
 }
 
@@ -784,7 +783,6 @@ swiper-slide img {
 
 .sec02 .Tit, .sec03 .Tit, .sec04 .Tit {
   height: 45px;
-  background-color: #222222;
   display: flex;
   align-items: center;
   margin-top: 50px;
@@ -827,6 +825,7 @@ swiper-slide img {
   text-align: center;
   font-weight: 600;
   height: 60px;
+  font-size: 14px;
   border-bottom: 1px solid #fff;
 }
 .bbs.list li a p, .qna.list li a p, .evnt.list li a p {
@@ -850,7 +849,7 @@ swiper-slide img {
 }
 .bbs.list li:hover p, .qna.list li:hover p, .evnt.list li:hover p {
   color: #222222;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .sec03 .b::before {
@@ -942,4 +941,26 @@ swiper-slide img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.swiper2 {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper2-slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=comm.css.map */
