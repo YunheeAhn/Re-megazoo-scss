@@ -510,7 +510,7 @@ legend {
 }
 
 /* 스와이퍼 */
-.swiper {
+.mySwiper {
   width: 100%;
   height: 100%;
   margin-left: auto;
@@ -525,10 +525,21 @@ legend {
   align-items: center;
   justify-content: center;
 }
-.swiper-slide img {
+.swiper-slide .swiper-web {
+  display: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.swiper-slide .swiper-mobile {
   display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: #e30613;
 }
 
 /* 슬라이드텍스트 */
@@ -964,29 +975,34 @@ legend {
 }
 
 .evnt-bnr {
-  width: 100%;
+  min-width: 320px;
+  width: 80%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+.evnt-bnr .swiper-pagination-bullet {
+  background: #e30613;
 }
 .evnt-bnr .evnt-slide {
   border-radius: 30px;
 }
 .evnt-bnr .evnt-slide .evnt-slide-img {
-  border-radius: 30px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: var(--swiper-width);
+  min-width: 320px;
+  border-radius: 20px;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.evnt-bnr .evnt-slide .evnt-slide-img img {
+.evnt-bnr .evnt-slide .evnt-slide-img .mobile-evnt {
+  max-width: 320px;
   display: block;
-  width: 100%;
+  border-radius: 20px;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  box-shadow: inset 1.5px 1.5px 3px #222222;
 }
 
 #sec05 {
@@ -1001,6 +1017,9 @@ legend {
   height: 22px;
   background: url(../image/sec05-icon.png) no-repeat center center;
   background-size: 22px;
+}
+#sec05 .inner .mapimg {
+  height: 100%;
 }
 #sec05 .inner .mapimg img {
   width: 100%;
@@ -1077,4 +1096,62 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #header .wrap #logo {
+    display: flex;
+  }
+  .swiper-slide .swiper-web {
+    display: block;
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .swiper-slide .swiper-mobile {
+    display: none;
+  }
+  .sec01 .cnt ul {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .sec01 .cnt li {
+    width: 25%;
+  }
+  #sec02, #sec03 {
+    width: 48%;
+  }
+  #sec03 {
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  #sec04 .inner, #sec04 .evnt-bnr {
+    width: 48%;
+  }
+  #sec04 .evnt-bnr {
+    height: 300px;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+  }
+  #sec04 .evnt-bnr .evnt-slide {
+    width: 100%;
+    height: 100%;
+  }
+  #sec05 {
+    position: relative;
+  }
+  #sec05 .Info, #sec05 .mapimg {
+    width: 48%;
+  }
+  #sec05 .mapimg {
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
 }/*# sourceMappingURL=comm.css.map */

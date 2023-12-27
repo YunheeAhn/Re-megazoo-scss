@@ -364,31 +364,38 @@
   }
 // sec04 이벤트 스와이퍼
 .evnt-bnr {
-  width: 100%;
+  min-width: 320px;
+  width: 80%;
   height: 100%;
     
   margin-left: auto;
   margin-right: auto;
 
+  .swiper-pagination-bullet {
+    background: $secondary;
+  }
   .evnt-slide {
     border-radius: 30px;
 
     .evnt-slide-img {
-      border-radius: 30px;
-      object-fit: contain;
-      width: var(--swiper-width);
+      min-width: 320px;
+      border-radius: 20px;
+      background-color: transparent;      
 
       @include flexAllCenter;
-      img {
+      
+      .mobile-evnt {
+        max-width: 320px;
         display: block;
-        width: 100%;
+        border-radius: 20px;
         height: 100%;
         object-fit: contain;
+        box-shadow: inset 1.5px 1.5px 3px $Mgray-900;
+        
       }
     }
   }
 }
-
   
 
 
@@ -412,6 +419,7 @@
       }
     }
     .mapimg {
+      height: 100%;
       img {
         width: 100%;
       }

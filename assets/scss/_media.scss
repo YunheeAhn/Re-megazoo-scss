@@ -1,0 +1,83 @@
+// 웹
+@media screen and (min-width:$breakpoint-sm) {
+    body {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    #header {
+        .wrap {
+            #logo {
+                display: flex;
+
+                // &::after {
+                    
+                // }
+            }
+        }
+    }
+    .swiper-slide {
+        .swiper-web {
+            display: block;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .swiper-mobile {
+            display: none;
+        }
+    }
+    .sec01 {
+        .cnt {
+            ul {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            li {
+                width: 25%;
+            }
+        }
+    }
+    #sec02, #sec03 {
+        width: 48%;
+    }
+    #sec03 {
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+    #sec04 {
+        .inner, .evnt-bnr {
+            width: 48%;
+        }
+        .evnt-bnr {
+            height: 300px;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            
+            .evnt-slide {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    #sec05 {
+        position: relative;
+        .Info, .mapimg {
+            width: 48%;
+        }
+        .mapimg {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            
+        
+        }
+    }
+}
+
+// 태블릿
+// @media screen and (min-width:430px) {
+// #header {
+
+//     }
+// }

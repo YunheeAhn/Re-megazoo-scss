@@ -64,8 +64,6 @@
         /* 네비게이션메뉴 */
         .gnb-wrap {
             position: relative;
-
-
             .btn.Imenubar{
                 position: absolute;
                 top: 0;
@@ -77,6 +75,8 @@
                 opacity: 0;
 
                 &:checked {
+                    
+
                     // 체크되면
                     & ~ .allmenu {
                         display: block;
@@ -188,7 +188,7 @@
 }  
 
 /* 스와이퍼 */
-.swiper {
+.mySwiper {
     width: 100%;
     height: 100%;
     
@@ -203,15 +203,21 @@
     background: $white;
 
     @include flexAllCenter;
-    img {
+    .swiper-web {
+        display: none;
+        object-fit: contain;
+    }
+    .swiper-mobile {
         display: block;
+        object-fit: contain;
         width: 100%;
         height: 100%;
     }
 }
-
-
-  
+.swiper-pagination-bullet {
+    background: $secondary;
+    }
+    
 /* 슬라이드텍스트 */
 .animated {
     .right {
@@ -262,6 +268,9 @@
         transform: translateX(-100%);
     }
     }
+    
+    
+
 
 #footer {
     .inner {
@@ -373,4 +382,4 @@
   
   
 
-@import 'main'; 
+@import 'main','media'; 
