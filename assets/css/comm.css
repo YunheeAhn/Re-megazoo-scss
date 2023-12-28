@@ -1142,9 +1142,6 @@ legend {
     display: flex;
     flex-wrap: nowrap;
   }
-  .sec01 .cnt li {
-    width: 25%;
-  }
   #sec-bg .vw {
     max-width: 1280px;
     margin: 0 auto;

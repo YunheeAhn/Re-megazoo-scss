@@ -33,10 +33,11 @@
             ul {
                 display: flex;
                 flex-wrap: nowrap;
+                li {
+                    // width: 25%;
+                }
             }
-            li {
-                // width: 25%;
-            }
+            
         }
     }
     #sec-bg {
