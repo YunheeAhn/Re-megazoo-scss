@@ -1,25 +1,27 @@
 // 웹
 @media screen and (min-width:$breakpoint-sm) {
     body {
-        max-width: 1280px;
+        max-width: 100%;
         margin: 0 auto;
     }
     #header {
         .wrap {
             #logo {
                 display: flex;
-
+                
                 // &::after {
                     
                 // }
             }
         }
     }
+    #main {
+    }
     .swiper-slide {
         .swiper-web {
             display: block;
             max-width: 100%;
-            object-fit: contain;
+            object-fit: cover;
         }
         .swiper-mobile {
             display: none;
@@ -27,22 +29,37 @@
     }
     .sec01 {
         .cnt {
+            
             ul {
                 display: flex;
                 flex-wrap: nowrap;
             }
             li {
-                width: 25%;
+                // width: 25%;
             }
         }
     }
-    #sec02, #sec03 {
-        width: 48%;
+    #sec-bg {
+        .vw {
+            max-width: 1280px;
+            margin: 0 auto;
+
+            .top0203 {
+                position: relative;
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+           }
     }
+    #sec02, #sec03 {
+       width: 48%;
+    }
+    
     #sec03 {
         position: absolute;
-        top: 50px;
+        top: -50px;
         right: 0;
+
     }
     #sec04 {
         .inner, .evnt-bnr {
@@ -61,6 +78,8 @@
         }
     }
     #sec05 {
+        max-width: 1280px;
+        margin: 0 auto;
         position: relative;
         .Info, .mapimg {
             width: 48%;
@@ -73,6 +92,41 @@
         
         }
     }
+
+    #footer {
+        background: $secondary;
+
+        .footer-vw {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .inner {
+            .sns {
+                position: absolute;
+                top: 58px;
+                right: 0;
+
+                padding: 10px;
+            }
+            .up {
+                padding: 10px;
+                margin: 0 auto;
+
+                padding-top: 60px;
+
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                .down {
+                    margin: 0 auto;
+
+                }
+            }
+            
+        }
+    }
+
 }
 
 // 태블릿

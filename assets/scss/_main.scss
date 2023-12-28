@@ -29,11 +29,12 @@
         justify-content: space-between;
         align-content: space-between;
 
+        width: 100%;
       }
   
       li {
         width: 50%;
-  
+
         a {
           height: 157px;
           border: 2.5px solid $Mgray-400;
@@ -52,6 +53,8 @@
             color: $white;
             font-weight: 500;
             border: 2.5px solid $Mgray-900;
+
+            transition: all .8s ;
 
             &.cnt01::before {
               content: '';
@@ -166,10 +169,22 @@
     }
   }
   
-
-  .btn.map {
+  .btn.map-behind {
+    // opacity: 0;
+    display: block;
+    width: 245px;
     height: 50px;
-    padding-left: 10px;
+    background: $primary;
+
+    border-radius: 50px;
+
+    z-index: -1;
+    position: absolute;
+  }
+  .btn.map {
+    height: 50px; 
+    padding-left: 15px;
+    padding-right: 10px;
 
     display: block;
     background: $Mgray-900;
@@ -201,6 +216,8 @@
 
       transform: translateY(-10px);
 
+      transition: all .5s;
+
       &::after {
         content: '';
         display: block;
@@ -222,10 +239,13 @@
     height: auto;
     background: #222 url(../image/sec-bg.jpg) $bg-img ;
     transform: translateX(-10px);
+
+   
   }
   
   #sec02, #sec03, #sec04, #sec05 {
     margin: 0 10px;
+    max-width: 1280px;
   }
   
   .sec02, .sec03, .sec04 {
@@ -298,6 +318,8 @@
 
     &:hover {
       background: $white;
+
+      transition: all 1s;
 
       span {
         color: $primary;

@@ -3,12 +3,19 @@
 // layout
 
 #header {
+    max-width: 1280px;
+    margin: 0 auto;
     height: $hd-height;
 }
 
 #footer {
     // 하단고정
     height: $ft-height;
+}
+
+#sec01 {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* 헤더 */
@@ -269,9 +276,6 @@
     }
     }
     
-    
-
-
 #footer {
     .inner {
         .sns {
@@ -293,8 +297,6 @@
                 margin: 15px 0;
                 
             }
-            
-
             .kakaotalk {
                 &::after {
                     content: '';

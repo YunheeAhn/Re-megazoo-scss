@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login : Megazoo</title>
+        <!-- 오픈그래프 -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="페이지 제목" />
+        <meta property="og:description" content="페이지 설명" />
+        <meta
+            property="og:image"
+            content="http://www.mysite.com/article/article1_featured_image.jpg"
+        />
+        <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+        <!-- 트위터카드 -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="페이지 제목" />
+        <meta name="twitter:description" content="페이지 설명" />
+        <meta
+            name="twitter:image"
+            content="http://www.mysite.com/article/article1.html"
+        />
+        <meta name="twitter:domain" content="사이트 명" />
+        <!-- favicon -->
+        <link rel="icon" href="./favicon.png" />
+        <!-- reset-css CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+        <!-- 폰트 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- 폰트어썸 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <!-- 구글아이콘 -->
+        <!-- icons -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+            rel="stylesheet"
+        />
+        <!-- symbols -->
+        <!-- <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"/> -->
+        <!-- 스와이퍼 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="#">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script defer type="text/javascript" src="./assets/js/comm.js"></script>
+        
+    </head>
+    <body>
+        <!-- 웹접근성, 꼭 있어야 함 -->
+        <div id="u-skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#main">본문 바로가기</a>
+        </div>
+    
+        <!-- 헤더 -->
+        <header id="header">
+            <div class="header-wrap">
+                <h1 id="logo">
+                    <a href="#" >
+                        <span class="blind">megazoo,메가주</span>
+                        <!-- after 로고 -->
+                    </a>
+                </h1>
+                <div class="btn-back">
+                    <button type="button" id="back" class="btn-back-icon">
+                        <p class="blind">뒤로가기</p>
+                        <!-- after 뒤로가기 아이콘 -->
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div id="login">
+            <div class="login-wrap">
+                <h2 class="login Tit">로그인</h2>
+            </div>
+
+            <div class="login-form">
+                <!-- 아이디입력 -->
+                <div class="login-ID">
+                    <div class="login-ID inner">
+                        <!-- before 사람아이콘 -->
+                        <p class="login-ID txt blind">아이디</p>
+                        <input type="text" maxlength="41" name="id" autocapitalize="none" value placeholder="아이디">
+                    </div>
+                    <!-- 값 잘못 입력시 삭제 버튼 -->
+                    <div class="login-ID delete">
+                        <button type="button" class="btn-delete" id="ID-clear">
+                            <!-- before 삭제 아이콘 -->
+                            <p class="blind">삭제</p>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- 패스워드 입력 -->
+                <div class="login-PW">
+                    <div class="login-PW inner">
+                        <!-- before 자물쇠아이콘 -->
+                        <p class="login-PW txt blind">비밀번호</p>
+                        <input type="password" maxlength="41" name="id" autocapitalize="none" value placeholder="비밀번호">
+                    </div>
+                    <!-- 값 잘못 입력시 삭제 버튼 -->
+                    <div class="login-PW delete">
+                        <button type="button" class="btn-delete" id="PW-clear">
+                            <!-- before 삭제 아이콘 -->
+                            <p class="blind">삭제</p>
+                        </button>
+                    </div>
+                </div>
+                <!-- 로그인하기 버튼 -->
+                <div class="login-submit">
+                    <button type="submit" class="btn-complete" id="login-submit">
+                        <p class="login-submit txt">로그인</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="login-stay-wrap">
+                <div class="login-stay">
+                    <input type="checkbox" name="login-stay" id="login-stay" class="login-stay btn">
+                    <label for="login-stay" id="login-stay">아이디 저장</label>
+                </div>
+                <div class="login-find">
+                    <ul class="login-find choice">
+                        <li>
+                            <a href="#">아이디찾기</a>
+                        </li>
+                        <li>
+                            <!-- before 슬래시 아이콘 -->
+                            <a href="#">비밀번호찾기</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="login-simple">
+                <div class="log-naver">
+                    <input type="button" class="btn-naver"value="네이버 1초 로그인">
+                        <p class="blind">네이버</p>
+                    </input>
+                </div>
+                <div class="log-kakaotalk">
+                    <input type="button" class="btn-kakaotalk" value="카카오톡 1초 로그인">
+                        <p class="blind">카카오톡</p>
+                    </input>
+                </div>
+                <div class="signup">
+                    <input type="button" class="btn-signup" value="아직 회원이 아니신가요?">
+                        <p class="blind">회원가입</p>
+                    </input>
+                </div>
+            </div>        
+        </div>
+
+
+
+
+        <!-- 풋터 -->
+        <footer id="footer">
+            <div class="footer inner">
+                <div class="sns">
+                    <ul>
+                        <li>
+                            <a href="#" class="kakaotalk">
+                                <!-- before 카톡아이콘 -->
+                                <span class="blind">카카오톡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="instagram">
+                                <!-- before 인스타그램아이콘 -->
+                                <span class="blind">인스타그램</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="facebook">
+                                <!-- before 페이스북아이콘 -->
+                                <span class="blind">페이스북</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="youtube">
+                                <!-- before 유튜브아이콘 -->
+                                <span class="blind">유튜브</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer up">
+                    <p class="toggle">반려동물의 혜택을 부르다 ㅣ 메가주</p>
+                    <!-- after 화살표 아이콘 -->
+                    <div class="footer down">
+                        <p>(주)메쎄이상 대표 : 조원표</p>
+                        <p>사업자번호 : 372-81-02557</p>
+                        <p>통신판매번호 : 2017-서울마포-0270</p>
+                        <p>주소 : 서울시 마포구 월드컵북로 589길 9 ES타워</p>
+                        <p>[참가문의]메가주, 케이펫페어 : 02-6121-6425</p>
+                        <p>E-mail : pet.es@esgroup.net</p>
+                        <p>copyrightⓒ 2022.MEGA ZOO. All Right Reserved.</p>
+                    </div>
+                </div>
+        </footer>
+    </body>
+
+</html>

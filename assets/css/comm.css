@@ -348,11 +348,18 @@ legend {
 }
 
 #header {
+  max-width: 1280px;
+  margin: 0 auto;
   height: 70px;
 }
 
 #footer {
   height: 70px;
+}
+
+#sec01 {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* 헤더 */
@@ -681,6 +688,7 @@ legend {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  width: 100%;
 }
 .sec01.cnt li {
   width: 50%;
@@ -703,6 +711,7 @@ legend {
   color: #fff;
   font-weight: 500;
   border: 2.5px solid #222222;
+  transition: all 0.8s;
 }
 .sec01.cnt li a:hover.cnt01::before {
   content: "";
@@ -804,9 +813,20 @@ legend {
   justify-content: center;
 }
 
+.btn.map-behind {
+  display: block;
+  width: 245px;
+  height: 50px;
+  background: #222222;
+  border-radius: 50px;
+  z-index: -1;
+  position: absolute;
+}
+
 .btn.map {
   height: 50px;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
   display: block;
   background: #222222;
   border: 2px solid #222222;
@@ -834,6 +854,7 @@ legend {
   background: #fff;
   border: 2px solid #222222;
   transform: translateY(-10px);
+  transition: all 0.5s;
 }
 .btn.map:hover::after {
   content: "";
@@ -858,6 +879,7 @@ legend {
 
 #sec02, #sec03, #sec04, #sec05 {
   margin: 0 10px;
+  max-width: 1280px;
 }
 
 .sec02 .Tit, .sec03 .Tit, .sec04 .Tit {
@@ -921,6 +943,7 @@ legend {
 }
 .bbs.list li:hover, .qna.list li:hover, .evnt.list li:hover {
   background: #fff;
+  transition: all 1s;
 }
 .bbs.list li:hover span, .qna.list li:hover span, .evnt.list li:hover span {
   color: #222222;
@@ -1100,7 +1123,7 @@ legend {
 
 @media screen and (min-width: 576px) {
   body {
-    max-width: 1280px;
+    max-width: 100%;
     margin: 0 auto;
   }
   #header .wrap #logo {
@@ -1109,8 +1132,8 @@ legend {
   .swiper-slide .swiper-web {
     display: block;
     max-width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .swiper-slide .swiper-mobile {
     display: none;
@@ -1122,12 +1145,21 @@ legend {
   .sec01 .cnt li {
     width: 25%;
   }
+  #sec-bg .vw {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #sec-bg .vw .top0203 {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
   #sec02, #sec03 {
     width: 48%;
   }
   #sec03 {
     position: absolute;
-    top: 50px;
+    top: -50px;
     right: 0;
   }
   #sec04 .inner, #sec04 .evnt-bnr {
@@ -1144,6 +1176,8 @@ legend {
     height: 100%;
   }
   #sec05 {
+    max-width: 1280px;
+    margin: 0 auto;
     position: relative;
   }
   #sec05 .Info, #sec05 .mapimg {
@@ -1153,5 +1187,30 @@ legend {
     position: absolute;
     top: 100px;
     right: 0;
+  }
+  #footer {
+    background: #e30613;
+  }
+  #footer .footer-vw {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  #footer .inner .sns {
+    position: absolute;
+    top: 58px;
+    right: 0;
+    padding: 10px;
+  }
+  #footer .inner .up {
+    padding: 10px;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #footer .inner .up .down {
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=comm.css.map */
