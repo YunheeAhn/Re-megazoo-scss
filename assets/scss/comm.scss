@@ -83,7 +83,6 @@
 
                 &:checked {
                     
-
                     // 체크되면
                     & ~ .allmenu {
                         display: block;
@@ -124,8 +123,25 @@
     }    
         
 .hover {
-    display: none;
+    li {
+        display: none;
+        background: $white;
+        height: 50px;
+        padding-left: 25px;
+    
+        font-size: 20px;
+        line-height: 50px;
+
+    &:hover {
+        border-top: 1.2px solid $secondary;
+        a {
+            color: $secondary;
+        }
+    }
+    }
+    
 }
+
 .allmenu {
     z-index: 1000;
     display: none;
@@ -144,16 +160,24 @@
     .menubar-click {
         li {
             .menubar-click.tit {
-                width: 100%;
+                // width: 100%;
                 background: $white;
                 display: flex;
                 align-items: center;
                 font-size: 2.375rem;
                 font-weight: bold;
-                padding: 20px 20px 20px 20px;
+                padding: 20px 30px;
             
                 &:hover {
                     color: $secondary;
+
+                    &~.hover {
+                        li {
+                            display: block;
+
+                        }
+                        
+                    }
             
                 &::after {
                     content: '';
@@ -173,6 +197,9 @@
     .lang {
         display: flex;
         justify-content: center;
+
+        margin-top: 40px;
+        margin-bottom: 32px ;
     
         ul {
             display: flex;
@@ -180,6 +207,7 @@
             align-items: center;
             a {
                 padding: 0 5px;
+                display: block;
             }
         }
     

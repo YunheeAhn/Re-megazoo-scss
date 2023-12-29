@@ -4,16 +4,87 @@
         max-width: 100%;
         margin: 0 auto;
     }
+    .allmenu {
+        position: static;
+    }
     #header {
+        height: $hd-height;
         .wrap {
             #logo {
                 display: flex;
                 
-                // &::after {
+                &::after {
+                    margin-right: auto;
+
+                    left: 0;
+                    transform: translate(0,-50%);
+                }
+            }
+            .header-icon {
+                margin-right: 0;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0,-50%);
+                .mypg {
                     
-                // }
+                }
+            }
+            .gnb-wrap {
+                position: static;
+                margin: 0 auto;
+                display: flex;
+                .allmenu-header {
+                    width: 0;
+                    display: none;
+                }
+                .lang {
+                    display: none;
+                }
+                .btn.Lmenubar {
+                    z-index: 0;
+                    display: none;
+                }
+                .btn.Imenubar {
+                    
+                    &:not(:checked) {
+                        & ~ .allmenu {
+                            display: block;
+                            position: static;
+    
+                            display: flex;
+                            
+                            
+                        }
+                    }  
+                }
+                .menubar-click {
+                    display: flex;
+                    font-size: 16px;
+                    background: none;
+                    
+                    
+
+                    .hover {
+                        position: absolute;
+                        top: 66px;
+                        left: 0;
+                        li {
+                            font-size: 14px;
+                            text-align: center;
+
+
+                            a {
+                                display: block;
+                            }
+                        }
+                        
+                    }
+                    
+                }
             }
         }
+        
     }
     #main {
     }
@@ -89,6 +160,10 @@
             position: absolute;
             top: 100px;
             right: 0;
+
+            img {
+                background: url(../image/webMap-img.png) $bg-img;
+            }
             
         
         }

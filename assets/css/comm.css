@@ -456,8 +456,19 @@ legend {
   transform: translate(0, -50%);
 }
 
-.hover {
+.hover li {
   display: none;
+  background: #fff;
+  height: 50px;
+  padding-left: 25px;
+  font-size: 20px;
+  line-height: 50px;
+}
+.hover li:hover {
+  border-top: 1.2px solid #e30613;
+}
+.hover li:hover a {
+  color: #e30613;
 }
 
 .allmenu {
@@ -475,16 +486,18 @@ legend {
   display: flex;
 }
 .allmenu .menubar-click li .menubar-click.tit {
-  width: 100%;
   background: #fff;
   display: flex;
   align-items: center;
   font-size: 2.375rem;
   font-weight: bold;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 30px;
 }
 .allmenu .menubar-click li .menubar-click.tit:hover {
   color: #e30613;
+}
+.allmenu .menubar-click li .menubar-click.tit:hover ~ .hover li {
+  display: block;
 }
 .allmenu .menubar-click li .menubar-click.tit:hover::after {
   content: "";
@@ -498,6 +511,8 @@ legend {
 .allmenu .lang {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 32px;
 }
 .allmenu .lang ul {
   display: flex;
@@ -506,6 +521,7 @@ legend {
 }
 .allmenu .lang ul a {
   padding: 0 5px;
+  display: block;
 }
 .allmenu .lang::before {
   content: "";
@@ -1046,6 +1062,7 @@ legend {
 }
 #sec05 .inner .mapimg img {
   width: 100%;
+  height: 459px;
 }
 #sec05 .Info {
   margin-top: 10px;
@@ -1126,8 +1143,64 @@ legend {
     max-width: 100%;
     margin: 0 auto;
   }
+  .allmenu {
+    position: static;
+  }
+  #header {
+    height: 70px;
+  }
   #header .wrap #logo {
     display: flex;
+  }
+  #header .wrap #logo::after {
+    margin-right: auto;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  #header .wrap .header-icon {
+    margin-right: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+  #header .wrap .gnb-wrap {
+    position: static;
+    margin: 0 auto;
+    display: flex;
+  }
+  #header .wrap .gnb-wrap .allmenu-header {
+    width: 0;
+    display: none;
+  }
+  #header .wrap .gnb-wrap .lang {
+    display: none;
+  }
+  #header .wrap .gnb-wrap .btn.Lmenubar {
+    z-index: 0;
+    display: none;
+  }
+  #header .wrap .gnb-wrap .btn.Imenubar:not(:checked) ~ .allmenu {
+    display: block;
+    position: static;
+    display: flex;
+  }
+  #header .wrap .gnb-wrap .menubar-click {
+    display: flex;
+    font-size: 16px;
+    background: none;
+  }
+  #header .wrap .gnb-wrap .menubar-click .hover {
+    position: absolute;
+    top: 66px;
+    left: 0;
+  }
+  #header .wrap .gnb-wrap .menubar-click .hover li {
+    font-size: 14px;
+    text-align: center;
+  }
+  #header .wrap .gnb-wrap .menubar-click .hover li a {
+    display: block;
   }
   .swiper-slide .swiper-web {
     display: block;
@@ -1184,6 +1257,9 @@ legend {
     position: absolute;
     top: 100px;
     right: 0;
+  }
+  #sec05 .mapimg img {
+    background: url(../image/webMap-img.png) no-repeat center center;
   }
   #footer {
     background: #e30613;
