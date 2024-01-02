@@ -64,3 +64,6 @@ Megazoo website Renewel with responsive Web
 
 2023-12-29
 : 반응형 작업중
+
+2024-01-02
+: 반응형 작업중(헤더, 풋터)

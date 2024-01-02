@@ -75,9 +75,7 @@
                                 display: block;
                             }
                         }
-                        
                     }
-                    
                 }
             }
         }
@@ -170,7 +168,6 @@
         background: $secondary;
 
         .footer-vw {
-            max-width: 1280px;
             margin: 0 auto;
             position: relative;
         }
@@ -183,7 +180,13 @@
                 padding: 10px;
             }
             .up {
-                padding: 10px;
+                padding-bottom: 40px;
+                .toggle {
+                    padding: 10px;
+                    margin-bottom: 34px;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
                 margin: 0 auto;
 
                 padding-top: 60px;
@@ -191,20 +194,32 @@
                 display: flex;
                 align-items: flex-start;
                 flex-direction: column;
-                .down {
-                    margin: 0 auto;
 
-                }
+                .down {
+                    font-size: 13px;
+                    .contact {
+                        display: flex;
+                        margin-bottom: 27px;
+                    }
+                    .mobile {
+                        display: none;
+                    }
+                    .web {
+                        display: block;
+
+                        .right {
+                            position: absolute;
+                            bottom: 50px;
+                            right: 0;
+                            
+                        }
+                    }
+                }    
             }
+
             
         }
     }
 
 }
 
-// 태블릿
-// @media screen and (min-width:430px) {
-// #header {
-
-//     }
-// }

@@ -665,6 +665,7 @@ legend {
   text-align: center;
   color: #fff;
   font-size: 14px;
+  line-height: 12px;
   font-weight: 600;
   padding: 10px 0;
 }
@@ -676,6 +677,9 @@ legend {
 }
 #footer .footer .down p {
   margin: 10px;
+}
+#footer .footer .down .web {
+  display: none;
 }
 
 /* 메인 */
@@ -1035,7 +1039,6 @@ legend {
   justify-content: center;
 }
 .evnt-bnr .evnt-slide .evnt-slide-img .mobile-evnt {
-  max-width: 320px;
   display: block;
   border-radius: 20px;
   height: 100%;
@@ -1265,7 +1268,6 @@ legend {
     background: #e30613;
   }
   #footer .footer-vw {
-    max-width: 1280px;
     margin: 0 auto;
     position: relative;
   }
@@ -1276,14 +1278,35 @@ legend {
     padding: 10px;
   }
   #footer .inner .up {
-    padding: 10px;
+    padding-bottom: 40px;
     margin: 0 auto;
     padding-top: 60px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
+  #footer .inner .up .toggle {
+    padding: 10px;
+    margin-bottom: 34px;
+    font-size: 20px;
+    font-weight: 600;
+  }
   #footer .inner .up .down {
-    margin: 0 auto;
+    font-size: 13px;
+  }
+  #footer .inner .up .down .contact {
+    display: flex;
+    margin-bottom: 27px;
+  }
+  #footer .inner .up .down .mobile {
+    display: none;
+  }
+  #footer .inner .up .down .web {
+    display: block;
+  }
+  #footer .inner .up .down .web .right {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
   }
 }/*# sourceMappingURL=comm.css.map */

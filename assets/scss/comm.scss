@@ -378,6 +378,7 @@
 
             color: $white;
             font-size: 14px;
+            line-height: 12px;
             font-weight: 600;
 
             padding: 10px 0;
@@ -404,6 +405,9 @@
 
             p {
                 margin: 10px;
+            }
+            .web {
+                display: none;
             }
         }
     }
