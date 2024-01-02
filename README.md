@@ -67,3 +67,5 @@ Megazoo website Renewel with responsive Web
 
 2024-01-02
 : 반응형 작업중(헤더, 풋터)
+: 해야할것(웹사이즈-네비바 호버시 나오는 발바닥 position:absolute 적용 /
+    웹사이즈-네비바 호버시 나오는 뎁스 메뉴 넓이 추가 적용)

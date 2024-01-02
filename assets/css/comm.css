@@ -1193,6 +1193,9 @@ legend {
     font-size: 16px;
     background: none;
   }
+  #header .wrap .gnb-wrap .menubar-click li {
+    position: relative;
+  }
   #header .wrap .gnb-wrap .menubar-click .hover {
     position: absolute;
     top: 66px;
