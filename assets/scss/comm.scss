@@ -174,9 +174,7 @@
                     &~.hover {
                         li {
                             display: block;
-
                         }
-                        
                     }
             
                 &::after {
@@ -229,8 +227,8 @@
     
     margin-left: auto;
     margin-right: auto;
-
 }
+
 
 .swiper-slide {
     text-align: center;
@@ -255,12 +253,18 @@
     
 /* 슬라이드텍스트 */
 .animated {
+    display: flex;
     .right {
         background: $primary;
+        display: flex;
     }
   
     .left {
         background: $secondary;
+        
+        a {
+            display: flex;
+        }
     }
   
     span {
@@ -393,9 +397,8 @@
             //     background: url(../image/downtoggle\(w\)-icon.png) $bg-img;
             //     background-size: 15px;
             //     }
-
             }
-            
+
         .down {
             display: block;
 

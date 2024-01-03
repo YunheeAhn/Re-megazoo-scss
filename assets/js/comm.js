@@ -30,7 +30,7 @@ new Swiper('.evnt-bnr', {
   // Optional parameters
   loop: true,
 
-  spaceBetween: 10,
+  spaceBetween: 100,
   slidesPerView : 1,
 
   autoplay: {

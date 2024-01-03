@@ -566,11 +566,18 @@ legend {
 }
 
 /* 슬라이드텍스트 */
+.animated {
+  display: flex;
+}
 .animated .right {
   background: #222222;
+  display: flex;
 }
 .animated .left {
   background: #e30613;
+}
+.animated .left a {
+  display: flex;
 }
 .animated span {
   font-family: "Noto sans KR";
@@ -1018,8 +1025,6 @@ legend {
 }
 
 .evnt-bnr {
-  min-width: 320px;
-  width: 80%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1031,14 +1036,14 @@ legend {
   border-radius: 30px;
 }
 .evnt-bnr .evnt-slide .evnt-slide-img {
-  min-width: 320px;
   border-radius: 20px;
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+.evnt-bnr .evnt-slide .evnt-slide-img .web-evnt {
+  display: none;
 }
 .evnt-bnr .evnt-slide .evnt-slide-img .mobile-evnt {
+  width: 100%;
   display: block;
   border-radius: 20px;
   height: 100%;
@@ -1196,17 +1201,28 @@ legend {
   #header .wrap .gnb-wrap .menubar-click li {
     position: relative;
   }
+  #header .wrap .gnb-wrap .menubar-click li .menubar-click.tit {
+    right: 0;
+    left: 0;
+  }
+  #header .wrap .gnb-wrap .menubar-click li .menubar-click.tit::after {
+    position: absolute;
+    right: 0;
+  }
   #header .wrap .gnb-wrap .menubar-click .hover {
     position: absolute;
     top: 66px;
     left: 0;
+    right: 0;
   }
   #header .wrap .gnb-wrap .menubar-click .hover li {
     font-size: 14px;
     text-align: center;
+    padding: 0;
   }
   #header .wrap .gnb-wrap .menubar-click .hover li a {
     display: block;
+    text-align: center;
   }
   .swiper-slide .swiper-web {
     display: block;
@@ -1225,7 +1241,8 @@ legend {
     max-width: 1280px;
     margin: 0 auto;
   }
-  #sec-bg .vw .top0203 {
+  #sec-bg .vw .top0203,
+  #sec-bg .vw .top0405 {
     position: relative;
     max-width: 1280px;
     margin: 0 auto;
@@ -1242,14 +1259,24 @@ legend {
     width: 48%;
   }
   #sec04 .evnt-bnr {
-    height: 300px;
+    height: 240px;
     position: absolute;
-    bottom: 80px;
-    right: 0;
+    bottom: 0;
+    right: -50%;
+    left: 0;
   }
   #sec04 .evnt-bnr .evnt-slide {
     width: 100%;
-    height: 100%;
+  }
+  #sec04 .evnt-bnr .evnt-slide .web-evnt {
+    display: block;
+    border-radius: 20px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    box-shadow: inset 1.5px 1.5px 3px #222222;
+  }
+  #sec04 .evnt-bnr .evnt-slide .mobile-evnt {
+    display: none;
   }
   #sec05 {
     max-width: 1280px;

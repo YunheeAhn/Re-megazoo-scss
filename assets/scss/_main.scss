@@ -239,8 +239,6 @@
     height: auto;
     background: #222 url(../image/sec-bg.jpg) $bg-img ;
     transform: translateX(-10px);
-
-   
   }
   
   #sec02, #sec03, #sec04, #sec05 {
@@ -386,8 +384,6 @@
   }
 // sec04 이벤트 스와이퍼
 .evnt-bnr {
-  min-width: 320px;
-  width: 80%;
   height: 100%;
     
   margin-left: auto;
@@ -400,14 +396,16 @@
     border-radius: 30px;
 
     .evnt-slide-img {
-      min-width: 320px;
       border-radius: 20px;
       background-color: transparent;      
 
-      @include flexAllCenter;
+      // @include flexAllCenter;
       
+      .web-evnt {
+        display: none;
+      }
       .mobile-evnt {
-        // max-width: 320px;
+        width: 100%;
         display: block;
         border-radius: 20px;
         height: 100%;
