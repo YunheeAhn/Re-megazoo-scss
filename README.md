@@ -75,3 +75,6 @@ Megazoo website Renewel with responsive Web
 : 웹사이즈-호버시 나오는 뎁스 메뉴 넓이 수정 완료, 호버시 발바닥 때문에 네비메뉴 안밀리게 수정완료
 : 전체 메인 페이지 완료 -끝-
 : 이제 그누보드 작업 시작
+
+2024-01-08
+: aos scrolltrigger 적용

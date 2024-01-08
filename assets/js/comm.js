@@ -57,3 +57,5 @@ new Swiper('.evnt-bnr', {
     el: '.swiper-scrollbar',
   },
 });
+
+AOS.init();
