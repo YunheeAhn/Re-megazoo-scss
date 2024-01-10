@@ -48,11 +48,12 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/comm.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script defer type="text/javascript" src="./assets/js/comm.js"></script>
-    
+
 </head>
 
 <!-- 모바일 메인페이지 -->
@@ -62,8 +63,7 @@
         <a href="#gnb">주메뉴 바로가기</a>
         <a href="#main">본문 바로가기</a>
     </div>
-
-    <!-- 헤더, GnbNav -->
+  
     <header id="header">
         <div class="wrap"> 
             <h1 id="logo">
@@ -81,6 +81,7 @@
             </div>
             
             <!-- gnb -->
+            
             <div class="gnb-wrap" >
                 <input type="checkbox" name="gnbNav" id="gnbNav" class="btn Imenubar">
                 <label for="gnbNav" class="btn Lmenubar">
@@ -96,36 +97,36 @@
                     </div>
                     <ul class="menubar-click">
                         <li>
-                            <a class="menubar-click tit" href="#">메가주
-                                <ul class="hover">
-                                    <li><a href="#">전시소개</a></li>
-                                    <li><a href="#">지난 전시 결과</a></li>
-                                </ul>
-                            </a>
+                            <a class="menubar-click tit" href="#">메가주</a>
+                            <ul class="hover">
+                                <li><a href="#">전시소개</a></li>
+                                <li><a href="#">지난 전시 결과</a></li>
+                            </ul>
+                            
                         </li>
                         <li>
-                            <a class="menubar-click tit" href="#">커뮤니티
-                                <ul class="hover">
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">Q&A</a></li>
-                                </ul>
-                            </a>
+                            <a class="menubar-click tit" href="#">커뮤니티</a>
+                            <ul class="hover">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                            </ul>
+                            
                         </li>
                         <li>
-                            <a class="menubar-click tit" href="#">관람안내
-                                <ul class="hover">
-                                    <li><a href="#">참가기업</a></li>
-                                    <li><a href="#">사전등록</a></li>
-                                    <li><a href="#">부스 배치도</a></li>                            
-                                </ul>
-                            </a>
+                            <a class="menubar-click tit" href="#">관람안내</a>
+                            <ul class="hover">
+                                <li><a href="#">참가기업</a></li>
+                                <li><a href="#">사전등록</a></li>
+                                <li><a href="#">부스 배치도</a></li>                            
+                            </ul>
+                            
                         </li>
                         <li>
-                            <a class="menubar-click tit" href="#">참가안내
-                                <ul class="hover">
-                                    <li><a href="#">참가신청</a></li>
-                                </ul>
-                            </a>
+                            <a class="menubar-click tit" href="#">참가안내</a>
+                            <ul class="hover">
+                                <li><a href="#">참가신청</a></li>
+                            </ul>
+                            
                         </li>
                         <li>
                             <a class="menubar-click tit" href="#">이벤트</a>
@@ -140,43 +141,136 @@
                     </div>
                 </nav>
             </div>
-
+            
         </div>
     </header>
 
+    <!-- 메인 -->
     <main id="mainEx" class="mainEx">
         <div class="mainEx-inner">
-            <div class="mainEx-inner Tit"></div>
-            <div class="mainEx-inner toggle"></div>
-            <div class="mainEx-inner category"></div>
-            <div class="mainEx-inner search"></div>
+            <!-- 참가기업타이틀 -->
+            <div class="mainEx-inner Tit">
+                <h2 class="b">
+                    <!-- before 별모양 -->
+                    참가기업
+                    <!-- after 별모양 -->
+                </h2>
+            </div>
+            <!-- 고양이강아지선택 버튼 -->
+            <div class="mainEx-inner toggle">
+                <div class="checkbox-wrapper-5">
+                    <div class="check">
+                      <input id="check-5" type="checkbox">
+                      <label for="check-5"></label>
+                    </div>
+                  </div>
+            </div>
+            <!-- 카테고리 리스트 -->
+            <div class="mainEx-inner category">
+                <ul>
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">사료</a></li>
+                    <li><a href="#">간식</a></li>
+                    <li><a href="#">의류</a></li>
+                    <li><a href="#">악세서리</a></li>
+                    <li><a href="#">헬스케어</a></li>
+                    <li><a href="#">IT</a></li>
+                    <li><a href="#">목욕*미용용품</a></li>
+                    <li><a href="#">외출*놀이용품</a></li>
+                    <li><a href="#">위생*배변용품</a></li>
+                    <li><a href="#">리빙용품</a></li>
+                    <li><a href="#">서비스*기타</a></li>
+                </ul>
+            </div>
+            <!-- 검색 -->
+            <div class="mainEx-inner search">
+                <div>
+                    <div>
+                        <input type="text">
+                        <label for="">초기화</label>
+                    </div>
+                    <div>
+                        <input type="text">
+                        <button>검색</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 업체리스트 -->
             <div class="mainEx-inner list">
                 <ul>
                     <li>
-                        <a href="#"></a>
+                        <a href="#">굿모닝거트클럽</a>
                     </li>
                     <li>
-                        <a href="#"></a>
+                        <a href="#">네추럴코어</a>
                     </li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li>
+                        <a href="#">네추럴키티</a>
+                    </li>
+                    <li>
+                        <a href="#">도란도란</a>
+                    </li>
+                    <li>
+                        <a href="#">동해형씨</a>
+                    </li>
+                    <li>
+                        <a href="#">로렌츠</a>
+                    </li>
+                    <li>
+                        <a href="#">마이베프</a>
+                    </li>
+                    <li>
+                        <a href="#">반피나</a>
+                    </li>
+                    <li>
+                        <a href="#">뽀뽀제과</a>
+                    </li>
+                    <li>
+                        <a href="#">슈퍼포우</a>
+                    </li>
+                    <li>
+                        <a href="#">오스테크</a>
+                    </li>
+                    <li>
+                        <a href="#">우피이피</a>
+                    </li>
+                    <li>
+                        <a href="#">제주강씨네</a>
+                    </li>
+                    <li>
+                        <a href="#">주식회사 온날</a>
+                    </li>
+                    <li>
+                        <a href="#">주베베</a>
+                    </li>
+                    <li>
+                        <a href="#">포리틀</a>
+                    </li>
+                    <li>
+                        <a href="#">포말리</a>
+                    </li>
+                    <li>
+                        <a href="#">포켄스</a>
+                    </li>
+                    <li>
+                        <a href="#">푸티</a>
+                    </li>
+                    <li>
+                        <a href="#">(주)하림더리얼</a>
+                    </li>
                 </ul>
+            </div>
+            <!-- 페이지네이션, 모바일에선 안보임 -->
+            <div class="pagination web">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
             </div>
         </div>
     </main>
@@ -184,47 +278,70 @@
 
     <!-- 풋터 -->
     <footer id="footer">
-        <div class="footer inner">
-            <div class="sns">
-                <ul>
-                    <li>
-                        <a href="#" class="kakaotalk">
-                            <!-- before 카톡아이콘 -->
-                            <span class="blind">카카오톡</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="instagram">
-                            <!-- before 인스타그램아이콘 -->
-                            <span class="blind">인스타그램</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="facebook">
-                            <!-- before 페이스북아이콘 -->
-                            <span class="blind">페이스북</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="youtube">
-                            <!-- before 유튜브아이콘 -->
-                            <span class="blind">유튜브</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer up">
-                <p class="toggle">반려동물의 혜택을 부르다 ㅣ 메가주</p>
-                <!-- after 화살표 아이콘 -->
-                <div class="footer down">
-                    <p>(주)메쎄이상 대표 : 조원표</p>
-                    <p>사업자번호 : 372-81-02557</p>
-                    <p>통신판매번호 : 2017-서울마포-0270</p>
-                    <p>주소 : 서울시 마포구 월드컵북로 589길 9 ES타워</p>
-                    <p>[참가문의]메가주, 케이펫페어 : 02-6121-6425</p>
-                    <p>E-mail : pet.es@esgroup.net</p>
-                    <p>copyrightⓒ 2022.MEGA ZOO. All Right Reserved.</p>
+        <div class="footer-vw">
+            <div class="footer inner">
+                <div class="sns">
+                    <ul>
+                        <li>
+                            <a href="#" class="kakaotalk">
+                                <!-- before 카톡아이콘 -->
+                                <span class="blind">카카오톡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="instagram">
+                                <!-- before 인스타그램아이콘 -->
+                                <span class="blind">인스타그램</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="facebook">
+                                <!-- before 페이스북아이콘 -->
+                                <span class="blind">페이스북</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="youtube">
+                                <!-- before 유튜브아이콘 -->
+                                <span class="blind">유튜브</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <div class="footer up">
+                    <p class="toggle">반려동물의 혜택을 부르다 ㅣ 메가주</p>
+                    <!-- after 화살표 아이콘 -->
+                    <div class="footer down">
+                        <div class="contact">
+                            <p>(주)메쎄이상 대표 : 조원표</p>
+                            <p>사업자번호 : 372-81-02557</p>
+                            <p>통신판매번호 : 2017-서울마포-0270</p>
+                            <p>주소 : 서울시 마포구 월드컵북로 589길 9 ES타워</p>
+                        </div>
+                        <div class="mobile">
+                            <p>[참가문의]메가주, 케이펫페어 : 02-6121-6425</p>
+                            <p>E-mail : pet.es@esgroup.net</p>
+                            <p>copyrightⓒ 2022.MEGA ZOO. All Right Reserved.</p>
+                        </div>
+                        <div class="web">
+                            <div>
+                                <p>[CS CENTER]</p>
+                                <p>(사)한국펫사료 협회 : 경기도 하남시 덕풍동 833-1 현대 지식산업센터 한강미사 A동 3층 35호</p>
+                                <p>[참가 문의]메가주, 케이펫페어 : 02-6121-6425    가낳지모 캣페어 : 02-6121-6467</p>
+                                <p>[참관객 문의]메가주, 케이펫페어 : 02-6121-6247    가낳지모 캣페어 : 02-6121-6248</p>
+                                <p>Mon - fri 09:00 - 18:00 / Lunch 12:30 - 13:30 / Sat, Holiday OFF</p>
+                            </div>
+                            
+                            <div class="web right">
+                                <p>&nbsp &nbsp &nbsp 홈페이지에서 제공하는 모든 콘텐츠 즉, 웹문서 첨부파일 이미지 동영상 등은</p>
+                                <p>저작권법에 의하여 보호 받는 저작물로 부단복제 및 배포는 원칙적으로 금합니다.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+        
     </footer>
 </body>
+</html>
