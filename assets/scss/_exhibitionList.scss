@@ -166,3 +166,15 @@
     }
   }
 }  
+
+.b {
+  &::before, &::after {
+    content: '';
+    display: block;
+    margin: 0 5px;
+    width: 22px;
+    height: 22px;
+    background: url(../image/pinkstar-icon.png) $bg-img;
+    background-size: 22px;
+  }
+}

@@ -849,6 +849,16 @@ legend {
   border-bottom-right-radius: 5px;
 }
 
+.b::before, .b::after {
+  content: "";
+  display: block;
+  margin: 0 5px;
+  width: 22px;
+  height: 22px;
+  background: url(../image/pinkstar-icon.png) no-repeat center center;
+  background-size: 22px;
+}
+
 #header {
   max-width: 1280px;
   margin: 0 auto;
