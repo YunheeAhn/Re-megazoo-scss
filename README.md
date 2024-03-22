@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 -->
-<img src="./assets/imag/megazoo-logo.png" width="18%">
+<img src="./assets/image/megazoo-logo.png" width="18%">
 
 <h1 align="center"> 🐶 메가주 홈페이지 리뉴얼 🐱 </h1>
 <br>
