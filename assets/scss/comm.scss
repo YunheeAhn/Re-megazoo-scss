@@ -10,7 +10,7 @@
 
 #footer {
     // 하단고정
-    height: $ft-height;
+    height: auto;
 }
 
 #sec01 {
@@ -44,7 +44,7 @@
     
                 @include posXY
             }
-          }
+        }
         .header-icon {
             margin-right: auto;
 
@@ -52,7 +52,7 @@
             display: block;
             width: 40px;
             height: 40px;
-          
+
             &::after {
                 content: '';
                 display: block;
@@ -258,7 +258,7 @@
         background: $primary;
         display: flex;
     }
-  
+
     .left {
         background: $secondary;
         
@@ -266,7 +266,7 @@
             display: flex;
         }
     }
-  
+
     span {
         font-family: 'Noto sans KR';
         font-size: 1.25rem;
@@ -276,7 +276,7 @@
 .flow {
     overflow: hidden;
 }
-  
+
 .flowtxt {
     display: inline-block;
     white-space: nowrap;
@@ -285,129 +285,170 @@
     width: 100%;
     height: 50px;
 }
-  
+
 .animated > .flowtxt {
     &.right > div {
         line-height: 50px;
         animation: marquee-ani 30s linear normal infinite;
     }
-  
+
     &.left > a > div {
         line-height: 50px;
         animation: marquee-ani 30s linear reverse infinite;
     }
 }
-  
-  @keyframes marquee-ani {
+
+@keyframes marquee-ani {
     from {
         transform: translateX(0);
     }
-  
+
     to {
         transform: translateX(-100%);
     }
-    }
-    
+}
+
 #footer {
-    .inner {
-        .sns {
-            display: block;
-            height: 30px;
+    width: 100%;
+    background: $secondary;
 
+    .footer-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+
+        padding-bottom: 20px;;
+
+        color: $white;
+
+        .footer-up {
             display: flex;
-            align-content: center;
+            justify-content: space-between;
+            flex-direction: column-reverse;
             align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-    
-            padding: 2px 0;
 
-            ul{
+            margin-bottom: 10px;
+
+            .footer-tit {
+                color: $white;
+
+                font-size: 20px;
+                font-weight: bold;
+
+                margin-top: 20px;
+
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 15px 0;
-                
-            }
-            .kakaotalk {
+
                 &::after {
-                    content: '';
                     display: block;
-                    margin-right: 15px;
-                    width: 22px;
-                    height: 22px;
-                    background: url(../image/kakao-talk.png) $bg-img;
-                    background-size: 18px;
+                    content: '\f106';
+                    font-family: "Font Awesome 6 Free";
+
+                    width: 30px;
+                    height: 30px;
+
+                    margin-left: 10px;  
+
+                    rotate: 180deg;
                 }
             }
-            .instagram {
-                &::after {
-                    content: '';
-                    display: block;
-                    margin-right: 15px;
-                    width: 22px;
-                    height: 22px;
-                    background: url(../image/instagram.png) $bg-img;
-                    background-size: 18px;
-                }
-            }
-            .facebook {
-                &::after {
-                    content: '';
-                    display: block;
-                    margin-right: 15px;
-                    width: 22px;
-                    height: 22px;
-                    background: url(../image/facebook.png) $bg-img;
-                    background-size: 18px;
-                }
-            }
-            .youtube {
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 22px;
-                    height: 22px;
-                    background: url(../image/youtube.png) $bg-img;
-                    background-size: 18px;
+
+            .sns {
+                width: 100%;
+
+                background: $gray-100;
+                .sns-list {
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    gap: 10px;
+                    padding: 10px;
+                    
+                    .sns-listitem {
+                        display: flex;
+                        align-items: center;
+
+                        .kakaoTalk::after {
+                            display: block;
+                            content: "\f075";
+                            font-family: "Font Awesome 6 free";
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 30px;
+                            text-align: center;
+
+                            width: 30px;
+                            height: 30px;
+
+                            color: $black;
+                        }
+                        .instaGram::after {
+                            display: block;
+                            content: "\f16d";
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 30px;
+                            text-align: center;
+
+                            width: 30px;
+                            height: 30px;
+
+                            color: $black;
+                        }
+                        .faceBook::after {
+                            display: block;
+                            content: "\f09a";
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 30px;
+                            text-align: center;
+
+                            width: 30px;
+                            height: 30px;
+
+                            color: $black;
+
+                        }
+                        .youTube::after {
+                            display: block;
+                            content: "\f167";
+                            font-family: "Font Awesome 6 Brands";
+                            font-weight: 400;
+                            font-size: 22px;
+                            line-height: 30px;
+                            text-align: center;
+
+                            width: 30px;
+                            height: 30px;
+
+                            color: $black;
+
+                        }
+                    }
                 }
             }
         }
-    }
-    .footer {
-        .up {
-            background: $secondary;
-            display: block;
-            text-align: center;
+        .footer-down {
+            padding: 0 10px;
+            .contact {
+                display: flex;
+                flex-direction: column;
+                gap : 10px;
 
-            color: $white;
-            font-size: 14px;
-            line-height: 12px;
-            font-weight: 600;
+                font-size: 13px;
 
-            padding: 10px 0;
-            
-            // .toggle {
-            //     &::after {
-            //     content: '';
-            //     display: block;
-            //     margin-left: 10px;
-            //     width: 15px;
-            //     height: 15px;
-            //     background: url(../image/downtoggle\(w\)-icon.png) $bg-img;
-            //     background-size: 15px;
-            //     }
+                margin-bottom: 27px;
             }
+            .mobile {
+                display: flex;
+                flex-direction: column;
+                gap : 10px;
 
-        .down {
-            display: block;
-
-            text-align: left;
-            font-size: 13px;
-            font-weight: 400;
-
-            p {
-                margin: 10px;
+                font-size: 13px;
             }
             .web {
                 display: none;
@@ -417,7 +458,5 @@
 }
 
 
-  
-  
 
 @import 'main','media'; 

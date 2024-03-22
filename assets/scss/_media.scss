@@ -99,7 +99,6 @@
     }
     
     .swiper-slide {
-               
         .swiper-web {
             display: block;
             max-width: 100%;
@@ -133,10 +132,10 @@
                 max-width: 1280px;
                 margin: 0 auto;
             }
-           }
+        }
     }
     #sec02, #sec03 {
-       width: 48%;
+        width: 48%;
     }
     
     #sec03 {
@@ -186,67 +185,151 @@
             img {
                 background: url(../image/webMap-img.png) $bg-img;
             }
-            
-        
         }
     }
 
     #footer {
+        width: 100%;
         background: $secondary;
-
-        .footer-vw {
+    
+        .footer-inner {
+            max-width: 1280px;
             margin: 0 auto;
-            position: relative;
-        }
-        .inner {
-            .sns {
-                position: absolute;
-                top: 58px;
-                right: 0;
-
-                padding: 10px;
-            }
-            .up {
-                padding-bottom: 40px;
-                .toggle {
-                    padding: 10px;
-                    margin-bottom: 34px;
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-                margin: 0 auto;
-
-                padding-top: 60px;
-
+    
+            padding-top: 60px;
+            padding-bottom: 20px;;
+    
+            color: $white;
+    
+            .footer-up {
                 display: flex;
-                align-items: flex-start;
-                flex-direction: column;
+                justify-content: space-between;
+                flex-direction: row;
+    
+                margin-bottom: 34px;
+    
+                .footer-tit {
+                    color: $white;
+    
+                    font-size: 20px;
+                    font-weight: bold;
 
-                .down {
-                    font-size: 13px;
-                    .contact {
-                        display: flex;
-                        margin-bottom: 27px;
-                    }
-                    .mobile {
+                    &::after {
                         display: none;
                     }
-                    .web {
-                        display: block;
+                }
+    
+                .sns {
+                    width: auto;
 
-                        .right {
-                            position: absolute;
-                            bottom: 50px;
-                            right: 0;
-                            
+                    background: none;
+                    
+                    .sns-list {
+                        width: 100%;
+    
+                        display: flex;
+                        align-items: center;
+    
+                        gap: 10px;
+                        
+                        .sns-listitem {
+                            display: flex;
+                            align-items: center;
+    
+                            .kakaoTalk::after {
+                                display: block;
+                                content: "\f075";
+                                font-family: "Font Awesome 6 free";
+                                font-weight: 400;
+                                font-size: 22px;
+                                line-height: 22px;
+                                text-align: center;
+    
+                                width: 30px;
+                                height: 30px;
+    
+                                color: $white;
+                            }
+                            .instaGram::after {
+                                display: block;
+                                content: "\f16d";
+                                font-family: "Font Awesome 6 Brands";
+                                font-weight: 400;
+                                font-size: 22px;
+                                line-height: 22px;
+                                text-align: center;
+    
+                                width: 30px;
+                                height: 30px;
+    
+                                color: $white;
+                            }
+                            .faceBook::after {
+                                display: block;
+                                content: "\f09a";
+                                font-family: "Font Awesome 6 Brands";
+                                font-weight: 400;
+                                font-size: 22px;
+                                line-height: 22px;
+                                text-align: center;
+    
+                                width: 30px;
+                                height: 30px;
+    
+                                color: $white;
+    
+                            }
+                            .youTube::after {
+                                display: block;
+                                content: "\f167";
+                                font-family: "Font Awesome 6 Brands";
+                                font-weight: 400;
+                                font-size: 22px;
+                                line-height: 22px;
+                                text-align: center;
+    
+                                width: 30px;
+                                height: 30px;
+    
+                                color: $white;
+    
+                            }
                         }
                     }
-                }    
+                }
             }
-
-            
+            .footer-down {
+                
+                .contact {
+                    display: flex;
+                    flex-direction: row;
+                    gap : 20px;
+    
+                    font-size: 13px;
+    
+                    margin-bottom: 27px;
+                }
+                .mobile {
+                    display: none;
+                }
+                .web {
+                    font-size: 13px;
+                    gap : 5px;
+    
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+    
+                    .web-right {
+                        text-align: right;
+                    }
+                }
+                
+            }
         }
     }
+    
 
+    
 }
 

@@ -10,13 +10,13 @@
     left: 50%;
     transform: translateX(-50%);
 }
-  
+
 @mixin posY {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }  
-  
+
 @mixin posXY {
     position: absolute;
     top: 50%;
@@ -31,9 +31,9 @@
     flex-direction: $direction;    
 }
 @mixin flexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @mixin flexAllCenter {

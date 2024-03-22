@@ -866,7 +866,7 @@ legend {
 }
 
 #footer {
-  height: 70px;
+  height: auto;
 }
 
 #sec01 {
@@ -1127,77 +1127,120 @@ legend {
     transform: translateX(-100%);
   }
 }
-#footer .inner .sns {
-  display: block;
-  height: 30px;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 2px 0;
-}
-#footer .inner .sns ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
-}
-#footer .inner .sns .kakaotalk::after {
-  content: "";
-  display: block;
-  margin-right: 15px;
-  width: 22px;
-  height: 22px;
-  background: url(../image/kakao-talk.png) no-repeat center center;
-  background-size: 18px;
-}
-#footer .inner .sns .instagram::after {
-  content: "";
-  display: block;
-  margin-right: 15px;
-  width: 22px;
-  height: 22px;
-  background: url(../image/instagram.png) no-repeat center center;
-  background-size: 18px;
-}
-#footer .inner .sns .facebook::after {
-  content: "";
-  display: block;
-  margin-right: 15px;
-  width: 22px;
-  height: 22px;
-  background: url(../image/facebook.png) no-repeat center center;
-  background-size: 18px;
-}
-#footer .inner .sns .youtube::after {
-  content: "";
-  display: block;
-  width: 22px;
-  height: 22px;
-  background: url(../image/youtube.png) no-repeat center center;
-  background-size: 18px;
-}
-#footer .footer .up {
+#footer {
+  width: 100%;
   background: #e30613;
-  display: block;
-  text-align: center;
+}
+#footer .footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 20px;
   color: #fff;
-  font-size: 14px;
-  line-height: 12px;
-  font-weight: 600;
-  padding: 10px 0;
 }
-#footer .footer .down {
+#footer .footer-inner .footer-up {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#footer .footer-inner .footer-up .footer-tit {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+}
+#footer .footer-inner .footer-up .footer-tit::after {
   display: block;
-  text-align: left;
-  font-size: 13px;
+  content: "\f106";
+  font-family: "Font Awesome 6 Free";
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  rotate: 180deg;
+}
+#footer .footer-inner .footer-up .sns {
+  width: 100%;
+  background: #F5F5F5;
+}
+#footer .footer-inner .footer-up .sns .sns-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+#footer .footer-inner .footer-up .sns .sns-list .sns-listitem {
+  display: flex;
+  align-items: center;
+}
+#footer .footer-inner .footer-up .sns .sns-list .sns-listitem .kakaoTalk::after {
+  display: block;
+  content: "\f075";
+  font-family: "Font Awesome 6 free";
   font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #000;
 }
-#footer .footer .down p {
-  margin: 10px;
+#footer .footer-inner .footer-up .sns .sns-list .sns-listitem .instaGram::after {
+  display: block;
+  content: "\f16d";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #000;
 }
-#footer .footer .down .web {
+#footer .footer-inner .footer-up .sns .sns-list .sns-listitem .faceBook::after {
+  display: block;
+  content: "\f09a";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #000;
+}
+#footer .footer-inner .footer-up .sns .sns-list .sns-listitem .youTube::after {
+  display: block;
+  content: "\f167";
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #000;
+}
+#footer .footer-inner .footer-down {
+  padding: 0 10px;
+}
+#footer .footer-inner .footer-down .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 27px;
+}
+#footer .footer-inner .footer-down .mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+#footer .footer-inner .footer-down .web {
   display: none;
 }
 
@@ -1807,48 +1850,110 @@ legend {
     background: url(../image/webMap-img.png) no-repeat center center;
   }
   #footer {
+    width: 100%;
     background: #e30613;
   }
-  #footer .footer-vw {
-    margin: 0 auto;
-    position: relative;
-  }
-  #footer .inner .sns {
-    position: absolute;
-    top: 58px;
-    right: 0;
-    padding: 10px;
-  }
-  #footer .inner .up {
-    padding-bottom: 40px;
+  #footer .footer-inner {
+    max-width: 1280px;
     margin: 0 auto;
     padding-top: 60px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    padding-bottom: 20px;
+    color: #fff;
   }
-  #footer .inner .up .toggle {
-    padding: 10px;
+  #footer .footer-inner .footer-up {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     margin-bottom: 34px;
+  }
+  #footer .footer-inner .footer-up .footer-tit {
+    color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
   }
-  #footer .inner .up .down {
-    font-size: 13px;
-  }
-  #footer .inner .up .down .contact {
-    display: flex;
-    margin-bottom: 27px;
-  }
-  #footer .inner .up .down .mobile {
+  #footer .footer-inner .footer-up .footer-tit::after {
     display: none;
   }
-  #footer .inner .up .down .web {
-    display: block;
+  #footer .footer-inner .footer-up .sns {
+    width: auto;
+    background: none;
   }
-  #footer .inner .up .down .web .right {
-    position: absolute;
-    bottom: 50px;
-    right: 0;
+  #footer .footer-inner .footer-up .sns .sns-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #footer .footer-inner .footer-up .sns .sns-list .sns-listitem {
+    display: flex;
+    align-items: center;
+  }
+  #footer .footer-inner .footer-up .sns .sns-list .sns-listitem .kakaoTalk::after {
+    display: block;
+    content: "\f075";
+    font-family: "Font Awesome 6 free";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+  }
+  #footer .footer-inner .footer-up .sns .sns-list .sns-listitem .instaGram::after {
+    display: block;
+    content: "\f16d";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+  }
+  #footer .footer-inner .footer-up .sns .sns-list .sns-listitem .faceBook::after {
+    display: block;
+    content: "\f09a";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+  }
+  #footer .footer-inner .footer-up .sns .sns-list .sns-listitem .youTube::after {
+    display: block;
+    content: "\f167";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+  }
+  #footer .footer-inner .footer-down .contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 13px;
+    margin-bottom: 27px;
+  }
+  #footer .footer-inner .footer-down .mobile {
+    display: none;
+  }
+  #footer .footer-inner .footer-down .web {
+    font-size: 13px;
+    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #footer .footer-inner .footer-down .web .web-right {
+    text-align: right;
   }
 }/*# sourceMappingURL=comm.css.map */
